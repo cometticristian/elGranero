@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>
+  <%- include('./partials/header') %>
+  <section class="section">
+    <div class="articles-box">
+      <% products.forEach((p) => {%>
+        <a href="" class="article">
+            <figure class="img-box">
+              <img src="/images/products/<%=p.Image[0].name%>" alt="<%=p.name%>">
+            </figure>
+            <% if (p.off > 0)  {%>
+              <div class="off-box">
+                <p class="off-text">-<%= p.off %>%</p>
+              </div>
+            <% } %>
+            <article class="info-box">
+              <div class="info-text-box">
+                <h3 class="info-text">
+                  <%= p.name %>
+                </h3>
+              </div>
+  <!--             <div class="info-text-box">
+                <p class="info-text">
+                  <%= p.description %>
+                </p>
+              </div> -->
+              <div class="info-text-box price-text-box">
+                  <%if (p.type == "unidad") {%>
+                    <h4 class="info-text">$<%= p.price %> </h4> <p class="info-text type"> (c/u)</p>
+                  <% } else if (p.type == "granel") {%>
+                    <h4 class="info-text">$<%= p.price %> </h4> <p class="info-text type"> (x 100g)</p>
+                  <% } %>      
+              </div>
+              <div class="info-text-box">
+                <button class="add-cart">Agregar al Carrito</button>
+              </div>
+            </article>
+        </a>
+      <%})%>
+    </div>
+  </section>
+  <%- include('./partials/footer') %>
+</body>
+</html>

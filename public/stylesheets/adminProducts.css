@@ -1,0 +1,42 @@
+.admin-img-product {
+    width: 40px;
+    height: 40px;
+}
+
+.table-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+tbody {
+    text-align: center;
+}
+
+th {
+    border: 2px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+
+@media (max-width: 630px) {
+
+    .description-table {
+        display: none;
+    }
+
+    .type-table {
+        display: none;
+    }
+
+    .off-table {
+        display: none;
+    }
+
+    .date-table {
+        display: none;
+    }
+
+  }
