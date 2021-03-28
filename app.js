@@ -9,7 +9,7 @@ const sequelize = db.sequelize;
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
-var adminRouter = require('./routes/admin')
+var adminRouter = require('./routes/admin');
 
 var app = express();
 

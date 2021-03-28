@@ -6,11 +6,11 @@ const controller = {
 
             db.Product.findAll(
                 {
-                    include:[{ association: "Image" }]
+                    include:[{ association: "Image" }, { association: "Margin" }, { association: "Selling_way" }]
                 }
             )
             .then(function(products) {
-                res.render('adminProducts', {products:products})
+                res.render('./products/adminProducts', {products:products})
             })
             .catch((error) => {
                 console.log(error);

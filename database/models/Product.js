@@ -21,9 +21,6 @@ module.exports = (sequelize, dataTypes) => {
         off: {
             type: dataTypes.INTEGER,
         },
-        type: {
-            type: dataTypes.STRING,
-        },
         stock: {
             type: dataTypes.INTEGER,
         }
@@ -36,9 +33,22 @@ module.exports = (sequelize, dataTypes) => {
     let Product = sequelize.define(alias, cols, config);
 
     Product.associate = function(models) {
+
         Product.hasMany(models.Image,{
             as: "Image",
             foreignKey: "product_id",
+            timestamps: "false"
+        });
+
+        Product.belongsTo(models.Margin,{
+            as: "Margin",
+            foreignKey: "margins_id",
+            timestamps: "false"
+        });
+
+        Product.belongsTo(models.Selling_way,{
+            as: "Selling_way",
+            foreignKey: "selling_ways_id",
             timestamps: "false"
         });
     }

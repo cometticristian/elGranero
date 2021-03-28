@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <div class="header-create">
+        <h1>CREAR PRODUCTO</h1>
+    </div>
+    <form action="">
+        <div class="body-sub-box">
+            <div class="label-box-general">
+                <div class="label-box">
+                    <label class="label-block" for="name">Nombre</label>
+                    <input class="input" type="text" name="name" id="name">
+                </div>
+                <div class="label-box">
+                    <div>
+                        <label class="label-block" for="price">Precio de costo</label>
+                        <input class="input" type="number" id="price" name="price">
+                    </div>
+                    <div>
+                        <label class="label-block" for="off">Descuento</label>
+                        <input class="input" type="number" id="off">
+                    </div>
+                    <div>
+                        <label class="label-block" for="stock">Stock</label>
+                        <input class="input" type="number" name="stock" id="stock">
+                    </div>
+                </div>
+                <div class="label-box">
+                    <select class="input" name="margin" id="margin">
+                        <option value="0">Margen de ganancia</option>
+                        <% margins.forEach((m) => { %>   
+                            <option value="<%-m.id%>"><%-m.margin%></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div class="label-box">
+                    <select class="input" name="selling_way" id="selling_way">
+                        <option value="0">Froma de venta</option>
+                        <% sellingWays.forEach((s) => { %>   
+                            <option value="<%-s.id%>"><%-s.way%></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div class="label-box">
+                    <label class="label-block" for="description">Descripcion</label>
+                    <textarea class="input" name="description" id="description" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="images-box">
+                <div class="input-file-box">
+                    <input type="file" class="input-file">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div class="input-file-box">
+                    <input type="file" class="input-file">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div class="input-file-box">
+                    <input type="file" class="input-file">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div class="input-file-box">
+                    <input type="file" class="input-file">
+                    <i class="fas fa-camera"></i>
+                </div>   
+            </div>
+            <div class="label-box">
+                <button class="submit-button" type="submit">Crear</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

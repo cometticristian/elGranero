@@ -1,0 +1,91 @@
+.body-sub-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header-create {
+    width: 100%;
+    height: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(255 111 101);
+    margin-bottom: 20px;
+}
+
+.label-box-general {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.label-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.label-block {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+}
+
+.input {
+    width: 40%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.select:focus {
+    outline: none;
+}
+
+.images-box {
+    width: 70%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.input-file-box {
+    height: 100%;
+    width: 15%;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.input-file {
+    height: 100%;
+    opacity: 0;
+    width: 100%;
+    margin-bottom: -65px;
+}
+
+.fa-camera {
+    font-size: 25px;
+    color: white;
+}
+
+.submit-button {
+    background-color: rgb(255 111 101);
+    border: none;
+    margin-bottom: 20px;
+    width: 75px;
+    height: 32px;
+    border-radius: 10px;
+}

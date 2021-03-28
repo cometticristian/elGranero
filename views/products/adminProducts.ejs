@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head') %>
+<%- include('../partials/head') %>
 <body>
   <div class="table-box">
     <table>
@@ -11,6 +11,7 @@
         <th class="description-table">DESCRIPCION</th>
         <th class="date-table">FECHA DE INGRESO</th>
         <th class="off-table">DESCUENTO</th>
+        <th>MARGEN DE GANANCIA</th>
         <th class="type-table">TIPO DE VENTA</th>
         <th>STOCK</th>
         <th>PRECIO</th>
@@ -23,7 +24,8 @@
             <td class="description-table"><%= p.description %></td>
             <td class="date-table"><%= p.release_date %></td>
             <td class="off-table"><%= p.off %></td>
-            <td class="type-table"><%= p.type %></td>
+            <td><%= p.Margin.margin %></td>
+            <td class="type-table"> <%= p.Selling_way.way %></td>
             <td><%= p.stock %></td>
             <td><%= p.price %></td>
         </tr>

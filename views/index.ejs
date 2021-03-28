@@ -12,11 +12,9 @@
         </p>
       </div>
       <div class="button-box">
-        <button class="slide-button"></button>
-        <button class="slide-button"></button>
-        <button class="slide-button"></button>
-        <button class="slide-button"></button>
-        <button class="slide-button"></button>
+        <%for(let i = 0; i < 5; i++) {%>
+          <button class="slide-button"></button>
+        <% } %>
       </div>
     </div>
     <div class="featured-box">
@@ -26,7 +24,7 @@
     </div>
     <div class="articles-box">
       <% products.forEach((p) => {%>
-        <a href="" class="article">
+        <a href="/products/detail/<%=p.id%>" class="article">
             <figure class="img-box">
               <img src="/images/products/<%=p.Image[0].name%>" alt="">
             </figure>
@@ -47,9 +45,9 @@
                 </p>
               </div> -->
               <div class="info-text-box price-text-box">
-                  <%if (p.type == "unidad") {%>
+                  <%if (p.Selling_way.id == 1) {%>
                     <h4 class="info-text">$<%= p.price %> </h4> <p class="info-text type"> (c/u)</p>
-                  <% } else if (p.type == "granel") {%>
+                  <% } else if (p.Selling_way.id == 2) {%>
                     <h4 class="info-text">$<%= p.price %> </h4> <p class="info-text type"> (x 100g)</p>
                   <% } %>      
               </div>

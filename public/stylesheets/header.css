@@ -101,3 +101,7 @@
 .search-bar:focus {
     outline: none;
 }
+
+#description {
+    height: 150px;
+}
