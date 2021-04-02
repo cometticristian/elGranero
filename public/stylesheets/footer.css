@@ -39,3 +39,11 @@
 .mercado_pago_logo {
     width: 100%;
 }
+
+@media (min-width: 630px) {
+
+    .footer {
+        border-radius: 0px;
+    }
+
+}   

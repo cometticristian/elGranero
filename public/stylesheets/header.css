@@ -105,3 +105,15 @@
 #description {
     height: 150px;
 }
+
+@media (min-width: 630px) {
+
+    .logo-box a {
+        height: 100%;
+    }
+
+    .header {
+        border-radius: 0px;
+    }
+
+}   

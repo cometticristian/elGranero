@@ -3,45 +3,50 @@
 <%- include('../partials/head') %>
 <body class="body-detail">
     <%- include('../partials/header') %>
-    <section class="section-detail">
-        <div class="main-figure-box">
-            <img src="/images/products/<%=product.Image[0].name%>" alt="<%=product.name%>">
-        </div>
-        <div class="button-box-detail">
-            <div class="button-box button-detail">
-                <%for(let i = 0; i < 5; i++) {%>
-                    <button class="slide-button slide-button-detail"></button>
-                <% } %>
+    <section>
+        <div class="section-detail">
+            <div class="small-photo-box-general">
+                <div class="small-photo-box"></div>
+                <div class="small-photo-box"></div>
+                <div class="small-photo-box"></div>
             </div>
-        </div>
-        <div class="description-box-detail">
-            <div class="title-off-box">
-                <h2><%=product.name%></h2>
-                <% if (product.off > 0)  {%>
-                    <div class="off-box off-box-detail">
-                      <p class="off-text">-<%= product.off %>%</p>
-                    </div>
-                <% } %>
+            <div class="main-figure-box">
+                <img src="/images/products/<%=product.Image[0].name%>" alt="<%=product.name%>">
             </div>
-            <p><%=product.description%></p>
-            <div class="price-box-detail">
-                <h3>$<%=product.price%></h3>
-                <div class="selling-way">
-                    <% if(product.Selling_way.id == 1) { %>
-                        <p>Por Unidad</p>
-                    <% } else if (product.Selling_way.id == 2) {%>
-                        <p>Los 100 gramos</p>
+            <div class="button-box-detail">
+                <div class="button-box button-detail">
+                    <%for(let i = 0; i < 5; i++) {%>
+                        <button class="slide-button slide-button-detail"></button>
                     <% } %>
                 </div>
             </div>
-            <div class="purchase-box">
+            <div class="description-box-detail">
+                <div class="title-off-box">
+                    <h2><%=product.name%></h2>
+                    <% if (product.off > 0)  {%>
+                        <div class="off-box off-box-detail">
+                          <p class="off-text">-<%= product.off %>%</p>
+                        </div>
+                    <% } %>
+                </div>
+                <p><%=product.description%></p>
+                <div class="price-box-detail">
+                    <h3>$<%=product.price%></h3>
+                    <div class="selling-way">
+                        <% if(product.Selling_way.id == 1) { %>
+                            <p>Por Unidad</p>
+                        <% } else if (product.Selling_way.id == 2) {%>
+                            <p>Los 100 gramos</p>
+                        <% } %>
+                    </div>
+                </div>
                 <div class="info-text-box">
                     <button class="add-cart">Agregar al Carrito</button>
                 </div>
-                <div class="info-text-box">
-                    <button class="add-cart">Comprar</button>
-                </div>
             </div>
+        </div>
+        <div class="related-products">
+            <h2>Productos Relacionados</h2>
         </div>
     </section>
     <%- include('../partials/footer') %>
