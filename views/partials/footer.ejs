@@ -7,7 +7,7 @@
             <a href="<%=main.facebook%>">
                 <img src="/images/facebook_logo.png" alt="facebook" class="social-networks-logo">
             </a>
-            <a href="">
+            <a href="<%=main.instagram%>">
                 <img src="/images/instagram_logo.png" alt="instagram" class="social-networks-logo">
             </a>
         </div>
@@ -17,19 +17,25 @@
         <img src="/images/mercado_pago_logo.png" alt="mercado_pago" class="mercado_pago_logo">
     </div>
 
-    <div class="contact_methods">
-        <img src="/images/whatsapp_logo.png" alt="whatsapp" class="social-networks-logo">
-        <p><%=main.phone%></p>
-        <img src="/images/gmail_logo.png" alt="gmail" class="social-networks-logo">
-        <p><%=main.email%></p>
-        <img src="/images/maps_logo.png" alt="maps" class="social-networks-logo">
-        <p><%=main.address%></p>
+    <div class="contact_methods_box">
+        <div class="contact_methods">
+            <img src="/images/whatsapp_logo.png" alt="whatsapp" class="wsp-logo">
+            <p class="contact-text text-phone"><%=main.phone%></p>
+        </div>
+        <div class="contact_methods">
+            <img src="/images/gmail_logo.png" alt="gmail" class="social-networks-logo gmail-logo">
+            <p class="contact-text text-mail"><%=main.email%></p>
+        </div>
+        <div class="contact_methods">
+            <img src="/images/maps_logo.png" alt="maps" class="social-networks-logo maps-logo">
+            <p class="contact-text text-adress"><%=main.address%></p>
+        </div>
     </div>
-
-    <ul>
-        <li><a href=""><p>Quienes somos</p></a></li>
-        <li><a href="">Terminos y condiciones</a></li>
-        <li><a href="">Contacto</a></li>
-        <li><a href="">Ubicacion</a></li>
-    </ul>
+    <div class="footer-menu-box">
+        <ul>
+            <li><a href="/about"><p>Quienes somos</p></a></li>
+            <li><a href="/terms">Terminos y condiciones</a></li>
+            <li><a href="/contact">Contacto</a></li>
+        </ul>
+    </div>
 </section>

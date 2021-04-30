@@ -21,13 +21,22 @@ const controller = {
 
         let id = req.params.productId;
 
-        db.Product.findByPk(id,
+        let product = db.Product.findByPk(id,
             {
                 include:[{ association: "Image" }, { association: "Margin" }, { association: "Selling_way" }]
             }
         )
-        .then(function(product) {
-            res.render('./products/productDetail', {product})
+
+        let products = db.Product.findAll(
+            {
+                include:[{ association: "Image" }, { association: "Margin" }, { association: "Selling_way" }]
+            }
+        )
+
+        Promise.all([product, products])
+
+        .then(function([product, products]) {
+            res.render('./products/productDetail', {product, products})
         })
         .catch((error) => {
             console.log(error);

@@ -2,11 +2,13 @@
     width: 100%;
     background-color: rgb(255 111 101);
     border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .social-networks-logo {
-    height: 50px;
-    width: 50px;
+    height: 60px;
 }
 
 .social-networks-box {
@@ -36,14 +38,152 @@
     align-items: center;
 }
 
-.mercado_pago_logo {
+.payment_methods {
     width: 100%;
+    height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mercado_pago_logo {
+    width: 60%;
+}
+
+.contact_methods_box {
+    border: solid 1px black;
+    border-radius: 20px;
+}
+
+.contact_methods {
+    display: flex;
+}
+
+.wsp-logo {
+    height: 95px;
+    margin-left: -43px;
+}
+
+.maps-logo {
+    margin-left: 10px;
+    margin-top: 9px;
+}
+
+.contact-text {
+    font-size: 14px;
+}
+
+.text-phone {
+    padding-top: 20px;
+    margin-left: -25px;
+}
+
+.text-mail {
+    padding-left: 21px;
+}
+
+.text-adress {
+    padding-left: 31px;
+    margin-top: 25px;
+}
+
+.footer-menu-box {
+    width: 100%;
+}
+
+.footer-menu-box ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-menu-box ul li a{
+    color: black;
 }
 
 @media (min-width: 630px) {
 
     .footer {
         border-radius: 0px;
+        flex-wrap: nowrap;
+    }
+
+    .social-networks-title {
+        display: none;
+    }
+
+    .social-networks-box-small {
+        border: none;
+        width: 100%;
+    }
+
+    .social-networks-box {
+        border: none;
+        width: 13%;
+        height: auto;  
+    }
+
+    .contact_methods_box {
+        border: none;
+        justify-content: space-around;
+        display: flex;
+        width: 50%;
+    }
+
+    .payment_methods {
+        width: 17%;
+    }
+
+    .mercado_pago_logo {
+        width: 88%;
+    }
+
+    .social-networks-logo {
+        height: 40px;
+    }
+
+    .wsp-logo {
+        height: 74px;
+        margin-left: -37px;
+    }
+
+    .contact_methods {
+        align-items: center;
+    }
+
+    .footer-menu-box {
+        width: 28%;
+        display: flex;
+        align-items: center;
+    }
+
+    .contact-text {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .footer-menu-box ul li a{
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .footer-menu-box ul li a:hover{
+        text-decoration: underline;
+    }
+
+    .text-phone {
+        margin-left: -28px;
+    }
+
+    .text-adress {
+        margin-left: 5px;
+    }
+
+    .text-mail {
+        margin-left: 5px;
     }
 
 }   

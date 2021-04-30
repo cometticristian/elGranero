@@ -15,8 +15,19 @@ const controller = {
             .catch((error) => {
                 console.log(error);
             })
-    }
+    },
 
+    about: (req, res, next) => {
+        res.render('about');
+    },
+
+    contact: (req, res, next) => {
+        res.render('contact');
+    },
+
+    terms: (req, res, next) => {
+        res.render('terms');
+    }
 }
 
 module.exports = controller;
